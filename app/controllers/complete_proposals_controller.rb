@@ -1,0 +1,2 @@
+class CompleteProposalsController < ApplicationController
+end

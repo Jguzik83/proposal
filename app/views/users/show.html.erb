@@ -1,0 +1,10 @@
+<h1>users show.html.erb</h1>
+<h3>Landing Page for when you log in</h3>
+
+<h5>Create New Proposal: When you already have data populated in storage</h5>
+<% if @topics > 0 %>
+  <%= link_to "Create New Proposal" %>
+  <%= link_to "Manage Library", splash_path(@user.id) %>
+<% else %>
+  <%= link_to "Manage Library", splash_path(@user.id) %>
+<% end %>

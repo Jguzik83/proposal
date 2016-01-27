@@ -1,0 +1,36 @@
+<h1>users new.html.erb</h1>
+<h5>Where we create a new user</h5>
+
+  <% if flash[:errors] %>
+    <div id='error_box'>
+      <% flash[:errors].each do |error| %>
+        <div id='error_message'><%= error %></div>
+      <%end%>
+    </div>
+  <% end %>
+
+<%= form_for @user do |f| %>
+  <div>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+  </div>
+  <div>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+  </div>
+  <div>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  </div>
+  <div>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  </div>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <div>
+  <%= f.label :confirm_password %>
+  <%= f.password_field :password_confirmation %>
+  </div>
+  <%= f.submit 'Sign Up' %>
+<% end %>

@@ -1,0 +1,6 @@
+<h1>Add New Info/View Info/Delete<h1>
+<h3>topics splash.html.erb</h3>
+
+<h5>Create new info link</h5>
+<%= link_to "Add Info", new_user_topic_path(@user.id) %>
+<%= link_to "View Current Info", user_topics_path(@user.id) %>

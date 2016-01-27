@@ -1,0 +1,16 @@
+<h1>sessions new.html.erb</h1>
+<h3>The root page, where we log in or link to create a new account</h3>
+
+<% if flash[:notice] %>
+  <%= flash[:notice] %>
+<% end %>
+
+<%= form_for(:user, url: login_path) do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <%= f.submit "Log In" %>
+<% end %>
+
+<p>New User? <%= link_to "Sign Up", new_user_path %></p>

@@ -1,0 +1,2 @@
+module CompleteProposalsHelper
+end

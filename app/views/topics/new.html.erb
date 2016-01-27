@@ -1,0 +1,15 @@
+<h1>topics new.html.erb</h1>
+<h3>Create a new topic</h3>
+
+<%= form_for(:topic, url: user_topics_path(current_user.id)) do |f| %>
+<%= f.hidden_field :user_id, value: @user.id %>
+  <%= f.label :main_topic %>
+  <%= f.text_field :main_topic %>
+  <%= f.label :sub_topic %>
+  <%= f.text_field :sub_topic %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.submit "Create New Topic" %>
+<% end %>
